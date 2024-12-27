@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>跌倒偵測</title>
+
+	<style type="text/css">
+	body {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		background-color: #f0f0f0;
+		font-family: Verdana, sans-serif;
+		height: auto;
+		margin: 0;
+	}
+
+	.container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 90%;
+		height: 90%;
+		max-width: 800px;
+		background-color: white;
+		padding: 30px;
+		margin: 30px;
+		border-radius: 3px;
+		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	}
+
+	.content {
+		text-align: center;
+		margin-top: 24px;
+	}
+
+	.content1 {
+		text-align: left;
+	} 
+
+	.btns {
+		display: flex;
+		flex-direction: row;
+		margin-top: 5px;
+	}
+
+	.theBtn {
+		border: none;
+		border-radius: 4px;
+		cursor: pointer;
+		padding: 6px;
+		margin-right: 8px;
+	}
+
+	.theBtn:hover {
+		background-color: lightblue;
+	}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1>跌倒偵測</h1>
+
+		<div class="content">
+			<h2>運作原理</h2>
+			<p class="content1">核心為其內建的加速感測器及陀螺儀，去分析手腕的移動軌跡及衝擊加速度，以判斷使用者是否跌倒。若偵測到跌倒狀況，手錶會發出警示音，並跳出回報現況的畫面，錶面有「聯絡緊急服務」的選項，或是可以點下「我沒事」關閉畫面。</br>若超過1分鐘沒有反應，Apple Watch將自動撥打緊急電話119，同時通知設定的緊急聯絡人。</p>
+			<p class="content1">現今智能手錶跌倒偵測已經能夠搜集每次跌倒的數據經由AI演算，偵測使用者是否真的跌倒。
+		</div>
+
+		<div class="content">
+			<h2>困難</h2>
+			<p class="content1">此功能僅限於「偵測」是否跌倒，意即它無法預判跌倒，雖能及時傳出求救訊號，但目前仍無法預判跌倒發生的可能，不能提供及時幫助。</p>
+		</div>
+
+		<div class="content">
+			<h2>解決方法</h2>
+			<p class="content1">為了解決上述問題，除了以感應器去偵測跌倒之外，可以透過聲音及影像的結合，去做跌倒的「預防」，例如運用環場式攝影機分析使用者周遭地形，或是利用毫米波雷達去分析使用者周遭地形，蒐集容易跌倒的地形及場地之數據、當下天氣濕度之數據、以及使用者身體各項數據（例如：血壓、心跳、血氧），結合AI分析當下可能跌倒的機率，設定超過一定的機率時，須對使用者提出警訊（例如：震動、訊息彈出），以降低使用者跌倒的風險、減少傷害的發生。</p>
+		</div>
+
+
+		<div class="btns">
+			<button class="theBtn" id="last">Last Page</button>
+			<button class="theBtn" id="homeBtn">Home</button>
+			<button class="theBtn" id="next">Next Page</button>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		var home = document.getElementById("homeBtn");
+		home.addEventListener("click", backToHome);
+		function backToHome() {
+			window.location.assign("file:///Users/zhengyujie/Desktop/group4_final%20project.html");
+		}
+
+		var next = document.getElementById("last");
+		next.addEventListener("click", lastPage);
+		function lastPage() {
+			window.location.assign("file:///Users/zhengyujie/Desktop/Introduction.html");
+		}
+
+		var next = document.getElementById("next");
+		next.addEventListener("click", nextPage);
+		function nextPage() {
+			window.location.assign("file:///Users/zhengyujie/Desktop/example2.html");
+		}
+
+	</script>
+
+</body>
+</html>
